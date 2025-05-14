@@ -17,18 +17,37 @@
     <!-- Preloader -->
     <div class="preloader">
         <div class="loader">
-            <!-- Removed loader-logo section to avoid duplication -->
+            <div class="loader-particles">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+            </div>
             <div class="spinner">
                 <img src="loader.png" alt="Loading..." class="spinner-img">
+                <div class="spinner-glow"></div>
             </div>
             <h2>Regional Growth Conclave 2025</h2>
-            <p>Loading...</p>
+            <div class="loading-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+                <span>.</span>
+                <span>.</span>
+                <span>.</span>
+            </div>
         </div>
     </div>
 
     <div class="content-wrapper">
     <header class="header">
-        <img src="banner.png" alt="Regional Growth Conclave 2025 Banner" class="banner-image">
+        <img src="banner2.png" alt="Regional Growth Conclave 2025 Banner" class="banner-image">
     </header>
 
     <main>
@@ -37,8 +56,22 @@
                 <div class="welcome-text" data-aos="fade-up">
                     <p class="greeting">Namaste! <span class="namaste-icon">🙏</span></p>
                     <p>You are cordially invited to the <span class="highlight">Regional Growth Conclave</span> under the vision of Hon'ble CM Dr. Mohan Yadav ji.</p>
-                    <div class="typing-container">
-                        <span id="typed-text"></span>
+                    <div class="text-animation-container">
+                        <div class="text-animation-particles">
+                            <div class="particle p1"></div>
+                            <div class="particle p2"></div>
+                            <div class="particle p3"></div>
+                            <div class="particle p4"></div>
+                            <div class="particle p5"></div>
+                            <div class="particle p6"></div>
+                        </div>
+                        <div class="text-animation-wrapper">
+                            <div class="text-animation">
+                                <p class="text-animation-item">Join us in shaping the future of Madhya Pradesh's 100 smart cities.</p>
+                                <p class="text-animation-item">Experience innovation, governance, and collaboration in action.</p>
+                                <p class="text-animation-item">Be part of the transformation journey of urban landscapes.</p>
+                            </div>
+                        </div>
                     </div>
                     <p class="highlight-text" data-aos="fade-up" data-aos-delay="300">Join us, as a new era of opportunities gets unveiled amidst the rapidly evolving urban landscapes of MP.</p>
                 </div>
@@ -88,7 +121,7 @@
                 </div>
 
                 <div class="event-tagline" data-aos="fade-up" data-aos-delay="400">
-                    <p>Under the able leadership of Hon'ble Chief Minister, Shri Mohan Yadavji</p>
+                    <p>Under the able leadership of Hon'ble Chief Minister, Dr. Mohan Yadav Ji</p>
                     <p>Madhya Pradesh is taking rapid strides to reach the pinnacle.</p>
                 </div>
             </div>
@@ -163,23 +196,8 @@
                 });
             });
 
-            // Initialize Typed.js
-            setTimeout(function() {
-                new Typed('#typed-text', {
-                    strings: [
-                        "Join us in shaping the future of Madhya Pradesh's 100 smart cities.",
-                        "Experience innovation, governance, and collaboration in action.",
-                        "Be part of the transformation journey of urban landscapes."
-                    ],
-                    typeSpeed: 50,
-                    backSpeed: 30,
-                    backDelay: 2000,
-                    startDelay: 500,
-                    loop: true,
-                    showCursor: true,
-                    cursorChar: '|'
-                });
-            }, 3000); // Start after preloader
+            // Text animation is now handled by CSS
+            // The animation starts automatically after the page loads
 
             // Initialize Countdown
             const eventDate = new Date('May 16, 2025 11:00:00').getTime();
