@@ -721,7 +721,7 @@ section h2::after {
     background-color: #e8f4f8; /* Light blue background */
     position: relative;
     color: var(--text-dark);
-    background-image: url('banner.png');
+    background-image: url('banner3.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
