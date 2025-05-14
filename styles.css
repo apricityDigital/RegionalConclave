@@ -12,12 +12,33 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), #004d6e);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
     transition: opacity 0.5s ease;
+    overflow: hidden;
+}
+
+.preloader::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+    top: -25%;
+    left: -25%;
+    animation: pulse-bg 4s infinite ease-in-out;
+}
+
+@keyframes pulse-bg {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
 }
 
 .loader {
@@ -57,33 +78,40 @@
 }
 
 .spinner {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     position: relative;
     margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 3s infinite ease-in-out;
 }
 
-.double-bounce1, .double-bounce2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: sk-bounce 2.0s infinite ease-in-out;
-}
-
-.double-bounce2 {
-    animation-delay: -1.0s;
-}
-
-@keyframes sk-bounce {
+@keyframes float {
     0%, 100% {
-        transform: scale(0.0);
-    } 50% {
-        transform: scale(1.0);
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.spinner-img {
+    width: 100%;
+    height: auto;
+    animation: pulse-fade 2s infinite ease-in-out;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+@keyframes pulse-fade {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
     }
 }
 
@@ -452,7 +480,7 @@ section h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('logo.png');
+    background-image: url('loader.png');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
@@ -867,7 +895,7 @@ section h2::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('logo.png');
+    background-image: url('loader.png');
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
